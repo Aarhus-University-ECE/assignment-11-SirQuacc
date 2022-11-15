@@ -9,5 +9,12 @@
 /* Fibonacci function definition */
 int fib (int n, int p, int pp)
 {
-    return 0;
+    assert (n >= 1);
+    if(n == 1){
+        return 1;
+    } else if(n == 2){
+        return 1;
+    } else 
+        return fib(n-1, pp+p, p);
+    
 }
