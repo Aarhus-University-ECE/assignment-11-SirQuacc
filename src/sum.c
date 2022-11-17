@@ -20,16 +20,16 @@ int sumtail (int n, int total)
 {
     assert(n >= 1);
     if(n > 1){
-      return sumtail(n-1, n + total);
+      return sumtail(n-1, n + total); //For n's above 1, update the running total by adding n, and re-call func with n-1
     } else
-        return 1 + total;
+        return 1 + total; //Base case, when reached, return 1 + running total
 }
 
 /* Sum integers 1 to n */
 int sumwhile (int n)
 {
   assert(n >= 1);
-  int r = 0; //Return sum variable
+  int r = 0; //Sum variable to return
   while(n > 0){ //Run loop n times (subtracting 1 each time)
     r+=n; //Add current n value to result variable
     n--;
